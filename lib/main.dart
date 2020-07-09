@@ -17,8 +17,14 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      title: "Flutter's Clothing",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        primaryColor: Color.fromARGB(255, 4, 125, 141),
+      ),
       initialRoute: initialRoute,
       getPages: Nav.routes,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
