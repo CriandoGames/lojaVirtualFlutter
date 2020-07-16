@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loja_virtual/infrastructure/navigation/navigation.dart';
-
 import 'infrastructure/navigation/routes.dart';
 
 void main() async {

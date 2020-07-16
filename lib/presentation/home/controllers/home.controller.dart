@@ -2,7 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  final PageController pageController = PageController();
+  final Rx<PageController> pageController = PageController().obs;
+  int currentPage = 0;
+
+  void setPage(int page) {
+    if (page == currentPage) return;
+
+    currentPage = page;
+    pageController.value.jumpToPage(page);
+  }
 
   Widget buildBodyBack() {
     return Container(
