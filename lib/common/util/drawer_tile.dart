@@ -12,7 +12,7 @@ class DrawerTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final int currentpage = Get.find<HomeController>().currentPage;
-
+    final Color color = Theme.of(context).primaryColor;
     return InkWell(
       onTap: () {
         Get.find<HomeController>().setPage(page);
@@ -25,12 +25,12 @@ class DrawerTile extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 32),
                 child: Icon(iconData,
                     size: 32,
-                    color: currentpage == page ? Colors.blue : Colors.grey)),
+                    color: currentpage == page ? color : Colors.grey)),
             Text(
               title,
               style: TextStyle(
                 fontSize: 16,
-                color: currentpage == page ? Colors.blue : Colors.grey,
+                color: currentpage == page ? color : Colors.grey,
               ),
               textAlign: TextAlign.start,
             ),
